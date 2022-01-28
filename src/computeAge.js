@@ -4,7 +4,7 @@ function computeAge(birthDay, currentDay){
     day = currentDay.getDate() - birthDay.getDate()
     if(year > 0){
         if(month == 0){
-            if(day > 0 )
+            if(day >= 0 )
                 return year;
             else
                 return year - 1;
