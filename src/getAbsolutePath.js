@@ -1,8 +1,10 @@
 function getAbsolutePath(tree, id){
-    let tab = [id];
-    let i = 1;
-    let currentId = id;
-    if(tree.get(currentId).parent == -1)
+
+    try {
+        let tab = [id];
+        let i = 1;
+        let currentId = id;
+        if(tree.get(currentId).parent == -1)
         {
             return tab;
         }
@@ -15,6 +17,11 @@ function getAbsolutePath(tree, id){
         }
     return tab;
     }
+    } catch (error) {
+        return "Vérifiez vos valeurs, l'une de vos valeurs d'entrée est nulle";
+        
+    }
+
 }
 
 module.exports = getAbsolutePath

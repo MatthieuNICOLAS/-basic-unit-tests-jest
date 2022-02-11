@@ -23,9 +23,25 @@ resultMap.set(7,elt8);
 resultMap.set(8,elt9);
 
 
-test('getLowestCommonAncestor returns 0 ', () => {
-    expect(getLowestCommonAncestor(resultMap,5,7)).toEqual(0);
+test('getLowestCommonAncestor returns 2 ', () => {
+    expect(getLowestCommonAncestor(resultMap,5,7)).toEqual(2);
 })
+test('getLowestCommonAncestor returns 2 ', () => {
+    expect(getLowestCommonAncestor(resultMap,5,2)).toEqual(2);
+})
+
 test('getLowestCommonAncestor returns Ils n\'ont pas d\' ancètres en commun  ', () => {
     expect(getLowestCommonAncestor(resultMap,0,1)).toEqual("Ils n'ont pas d' ancètres en commun");
+})
+test('getLowestCommonAncestor returns Ils n\'ont pas d\' ancètres en commun  ', () => {
+    expect(getLowestCommonAncestor(resultMap,null,1)).toEqual("Ils n'ont pas d' ancètres en commun");
+})
+test('getLowestCommonAncestor returns Ils n\'ont pas d\' ancètres en commun  ', () => {
+    expect(getLowestCommonAncestor(resultMap,null,null)).toEqual("Une des valeurs en entrée est nulle");
+})
+test('getLowestCommonAncestor returns Ils n\'ont pas d\' ancètres en commun  ', () => {
+    expect(getLowestCommonAncestor(resultMap,0,null)).toEqual("Une des valeurs en entrée est nulle");
+})
+test('getLowestCommonAncestor returns Ils n\'ont pas d\' ancètres en commun  ', () => {
+    expect(getLowestCommonAncestor(null,0,1)).toEqual("Une des valeurs en entrée est nulle");
 })

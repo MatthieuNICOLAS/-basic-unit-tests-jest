@@ -22,7 +22,13 @@ resultMap.set(6,elt7);
 resultMap.set(7,elt8);
 resultMap.set(8,elt9);
 
-
+let id = 8
 test('getAbsolutePath returns {8,7,3,2,0} ', () => {
-    expect(getAbsolutePath(resultMap, 8)).toEqual([8,7,3,2,0]);
+    expect(getAbsolutePath(resultMap, id)).toEqual([8,7,3,2,0]);
+})
+test('getAbsolutePath returns null ', () => {
+    expect(getAbsolutePath(resultMap, null)).toBe("Vérifiez vos valeurs, l'une de vos valeurs d'entrée est nulle");
+})
+test('getAbsolutePath returns null ', () => {
+    expect(getAbsolutePath(null, id)).toBe("Vérifiez vos valeurs, l'une de vos valeurs d'entrée est nulle");
 })

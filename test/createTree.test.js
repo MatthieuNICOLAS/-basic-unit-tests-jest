@@ -12,3 +12,6 @@ resultMap.set(2,elt3);
 test('createTree returns 2 noeuds ', () => {
     expect(createTree(tab1)).toEqual(resultMap);
 })
+test('createTree returns Le tableau rentré est nul ', () => {
+        expect(createTree(null)).toBe("Le tableau rentré est nul");
+})
